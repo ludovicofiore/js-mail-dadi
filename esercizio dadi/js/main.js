@@ -10,3 +10,19 @@ console.log(randomUser);
 let randomPc = Math.floor(Math.random() * 6) + 1;
 
 console.log(randomPc);
+
+
+// aggiunta condizioni if
+
+if (randomUser > randomPc) {
+
+    console.log("utente vince");
+
+} else if (randomUser === randomPc) {
+
+    console.log("ha vinto l'amicizia");
+    
+} else {
+
+    console.log("PC vince");
+}
