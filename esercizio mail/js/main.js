@@ -6,45 +6,63 @@ const mailList = ["luca@mail", "pippo@mail", "marco@mail", "simone@mail", "andre
 
 
 // input per inserimento email utente
-let userMail = prompt("inserisci la tua mail");
+let userInput = document.querySelector(".mail-input")
+
 
 // dichiaro variabile container
 const divContainer = document.querySelector(".container");
 
+// gestione attività del bottone al click
 
-// aggiunta ciclo valori array
+const myButton = document.querySelector(".input-button");
 
-for (let i = 0; i < mailList.length; i++) {
+myButton.addEventListener("click",
+    function(){
 
-    
-    let mailListValue = mailList[i];
+        // value input 
+        let userMail = userInput.value;
 
-    // inserimento if 
-    // se email presente messaggio positivo
-    if (userMail === mailListValue) {
+
+        // aggiunta ciclo valori array
+
+        for (let i = 0; i < mailList.length; i++) {
+
+            
+            let mailListValue = mailList[i];
+
+            // inserimento if 
+            // se email presente messaggio positivo
+            if (userMail === mailListValue) {
+                
+                let result = "ammesso";
+
+                // creo elemento e porto risultato in pagina
+                const element = `<p>${result}</p>`;
+                divContainer.innerHTML += element;
+
+                console.log(result);
+
+                // altrimenti messaggio negativo
+            } else {
+
+                let alternativeResult = "non ammesso";
+
+                // creo elemento e porto risultato in pagina
+                const element = `<p>${alternativeResult}</p>`;
+                divContainer.innerHTML += element;
+
+                console.log(alternativeResult);
+            } 
+
+            
+        }
         
-        let result = "ammesso";
 
-        // creo elemento e porto risultato in pagina
-        const element = `<p>${result}</p>`;
-        divContainer.innerHTML += element;
+    }
+)
 
-        console.log(result);
 
-        // altrimenti messaggio negativo
-    } else {
 
-        let alternativeResult = "non ammesso";
-
-        // creo elemento e porto risultato in pagina
-        const element = `<p>${alternativeResult}</p>`;
-        divContainer.innerHTML += element;
-
-        console.log(alternativeResult);
-    } 
-
-    
-}
 
 
 
