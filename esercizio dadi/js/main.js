@@ -15,11 +15,15 @@ myButton.addEventListener("click",
         // genero numero casuale per utente
         let randomUser = Math.floor(Math.random() * 6) + 1;
 
+        document.getElementById("user-number").innerHTML =randomUser
+
         console.log(randomUser);
 
 
         // genero numero casuale per pc
         let randomPc = Math.floor(Math.random() * 6) + 1;
+
+        document.getElementById("pc-number").innerHTML =randomPc
 
         console.log(randomPc);
 
@@ -32,7 +36,7 @@ myButton.addEventListener("click",
             let result = "Utente vince"
 
             // creo elemento e porto risultato in pagina
-            const element = `<h2>${result}</h2>`;
+            const element = `<h2 class="title-result">${result}</h2>`;
             divContainer.innerHTML += element;
 
             console.log("utente vince");
@@ -43,7 +47,7 @@ myButton.addEventListener("click",
             let result = "Ha vinto l'amicizia"
 
             // creo elemento e porto risultato in pagina
-            const element = `<h2>${result}</h2>`;
+            const element = `<h2 class="title-result">${result}</h2>`;
             divContainer.innerHTML += element;
 
             console.log("ha vinto l'amicizia");
@@ -54,7 +58,7 @@ myButton.addEventListener("click",
             let result = "PC vince"
 
             // creo elemento e porto risultato in pagina
-            const element = `<h2>${result}</h2>`;
+            const element = `<h2 class="title-result">${result}</h2>`;
             divContainer.innerHTML += element;
 
             console.log("PC vince");

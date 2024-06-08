@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 65%;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.container > h3 {
+    margin: 30px 0;
+}
+
+.title-result {
+    color: red;
+    margin: 50px 0;
+}
