@@ -8,35 +8,42 @@ const mailList = ["luca@mail", "pippo@mail", "marco@mail", "simone@mail", "andre
 // input per inserimento email utente
 let userMail = prompt("inserisci la tua mail");
 
+// dichiaro variabile container
+const divContainer = document.querySelector(".container");
+
 
 // aggiunta ciclo valori array
 
 for (let i = 0; i < mailList.length; i++) {
 
-    // console.log(mailList[i]);
+    
     let mailListValue = mailList[i];
 
     // inserimento if 
-
     // se email presente messaggio positivo
     if (userMail === mailListValue) {
         
         let result = "ammesso";
 
-        document.getElementById("stato").innerHTML = result
+        // creo elemento e porto risultato in pagina
+        const element = `<p>${result}</p>`;
+        divContainer.innerHTML += element;
 
         console.log(result);
 
         // altrimenti messaggio negativo
     } else {
 
-        let result = "non ammesso";
+        let alternativeResult = "non ammesso";
 
-        document.getElementById("stato").innerHTML = result
+        // creo elemento e porto risultato in pagina
+        const element = `<p>${alternativeResult}</p>`;
+        divContainer.innerHTML += element;
 
-        console.log(result);
+        console.log(alternativeResult);
     } 
 
+    
 }
 
 
