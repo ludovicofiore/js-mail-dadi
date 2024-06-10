@@ -23,6 +23,10 @@ myButton.addEventListener("click",
         let userMail = userInput.value;
 
 
+        // condizione di partenza
+        let result = false 
+
+
         // aggiunta ciclo valori array
 
         for (let i = 0; i < mailList.length; i++) {
@@ -30,41 +34,32 @@ myButton.addEventListener("click",
             
             let mailListValue = mailList[i];
 
-            // inserimento if 
-            // se email presente messaggio positivo
+            // inserimento if valore corrispondente
             if (userMail === mailListValue) {
                 
-                let result = "ammesso";
+                result = true;
 
-                // creo elemento e porto risultato in pagina
-                const element = `<p>${result}</p>`;
-                divContainer.innerHTML += element;
-
-                console.log(result);
-
-                // altrimenti messaggio negativo
-            } else {
-
-                let alternativeResult = "non ammesso";
-
-                // creo elemento e porto risultato in pagina
-                const element = `<p>${alternativeResult}</p>`;
-                divContainer.innerHTML += element;
-
-                console.log(alternativeResult);
-            } 
-
+            }
             
+        }
+
+
+        // if fuori dal ciclo con output
+        if (result === false) {
+
+             const element = `<p>non ammesso</p>`;
+
+            divContainer.innerHTML += element;
+        } else {
+
+            const element = `<p>ammesso</p>`;
+            divContainer.innerHTML += element;
+
         }
         
 
     }
 )
-
-
-
-
-
 
 
 
